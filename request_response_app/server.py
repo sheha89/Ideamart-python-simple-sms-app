@@ -12,11 +12,11 @@ def httpd(handler_class=mo_request_handler.MoRequestHandler, server_address=(con
                                                                              config.getint('senderAddress', 'port')), ):
     try:
         alert_service_server = BaseHTTPServer.HTTPServer(server_address, handler_class)
-        LOG.debug("starting the server on host %s and port %s " % server_address)
+        LOG.debug("Starting the server on host %s and port %s " % server_address)
         alert_service_server.serve_forever()
 
     except KeyboardInterrupt:
-        LOG.debug('^C received, shutting down the web server')
+        LOG.debug('^C Received, shutting down the web server')
 
 
 def init_logger():

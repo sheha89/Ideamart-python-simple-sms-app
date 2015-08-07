@@ -21,10 +21,10 @@ class MtRequestHandler(object):
                            "password": mt_request_data.password, "applicationId": mt_request_data.application_id,
                            "encoding": mt_request_data.encoding, "version": mt_request_data.version}
         mt_request = json.dumps(mt_request_json)
-        LOG.debug("Mt Request : %s " % mt_request)
+        LOG.debug("MT Request : %s " % mt_request)
         mt_response = requests.post(self.url, data=mt_request, headers=self.headers)
         LOG.debug("MT Response : %s " % mt_response.text)
-        LOG.debug("Mt Message sent . . . ")
+        LOG.debug("MT Message sent!!!")
 
 
 class MtRequest(object):

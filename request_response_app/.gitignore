@@ -1,6 +1,7 @@
 # IntelliJ project files
 .idea
 *.iml
+*.pyc
 
 # Logs
 trace.log
